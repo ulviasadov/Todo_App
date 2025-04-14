@@ -67,8 +67,12 @@ button {
     margin: 10px 0;
 }
 
-.fa-trash {
+.fa-circle-xmark {
     color: rgb(119, 119, 119);
+}
+
+.fa-circle-xmark:hover{
+    color: #d70000;
 }
 
 #Del-Container {

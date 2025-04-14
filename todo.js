@@ -45,7 +45,7 @@ function addTodoToUi(newTodo) {
     a.href = "#";
 
     const i = document.createElement("i");
-    i.className = "fa-solid fa-trash";
+    i.className = "fa-solid fa-circle-xmark";
 
     a.appendChild(i);
     li.appendChild(a);
@@ -92,7 +92,7 @@ function showAlert(type, message) {
 
 function removeTodoFromUi(e) {
     let myTarget = e.target.className;
-    if (myTarget.includes("fa-trash")) {
+    if (myTarget.includes("fa-circle-xmark")) {
         let todoItem = e.target.closest("li");
         todoItem.remove();
         removeTodoFromStorage(todoItem.textContent);
