@@ -1,9 +1,10 @@
-const addText = document.querySelector("#Add-Todo");
-const addBtn = document.querySelector("#Add");
+const alertContainer = document.querySelector(".alert--container");
+const addText = document.querySelector(".add--todo");
+const addBtn = document.querySelector(".btn--add");
 const ul = document.querySelector("ul");
-const todoTop = document.querySelector("#Todo-top");
-const clearBtn = document.querySelector("#Delete");
-const searchInput = document.querySelector("#Search");
+const todoTop = document.querySelector(".todo--top");
+const clearBtn = document.querySelector(".btn--delete");
+const searchInput = document.querySelector(".search");
 let todos = [];
 
 runEvents();
@@ -85,7 +86,7 @@ function showAlert(type, message) {
     div.className = `alert alert-${type}`;
     div.textContent = message;
 
-    todoTop.appendChild(div);
+    alertContainer.appendChild(div);
 
     setTimeout(() => div.remove(), 2000);
 }
